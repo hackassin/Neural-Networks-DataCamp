@@ -10,7 +10,7 @@ df['label'] = iris.target
 #df2 = df.assign(iris.target)
 #print(df.head())
 #print(iris)
-label_versicolor = df['label'] == 2
+label_versicolor = df['label'] == 1
 versicolor_data = df[label_versicolor]
 versicolor_petal_length = np.array(versicolor_data['petal length (cm)'])
 print('versicolor_petal_length:\n', versicolor_data['petal length (cm)'])
