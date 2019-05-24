@@ -20,7 +20,7 @@ bl_2012 = df2['Beak length, mm'].values
 ratio_1975 = bl_1975/bd_1975
 ratio_2012 = bl_2012/bd_2012
 
-# Compute means
+# Compute means of original data
 mean_ratio_1975 = np.mean(ratio_1975)
 mean_ratio_2012 = np.mean(ratio_2012)
 
