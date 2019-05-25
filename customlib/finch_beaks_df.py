@@ -20,3 +20,12 @@ def drw_finch_df():
         "C:/Users/amlan/Documents/Git Repos/Machine Learning/Neural-Networks-DataCamp/customlib\datasets/finch_beaks_2012.csv")
     df = pd.concat([df1, df2], sort=False)
     return df1 , df2, df
+
+def finch_parent_offspring():
+    df3 = pd.read_csv('C:/Users/amlan/Documents/Git Repos/Machine Learning/Neural-Networks-DataCamp/customlib/datasets/fortis_beak_depth_heredity.csv')
+    df4 = pd.read_csv('C:/Users/amlan/Documents/Git Repos/Machine Learning/Neural-Networks-DataCamp/customlib/datasets/scandens_beak_depth_heredity.csv')
+    bd_parent_fortis = (df3['Male BD'].values + df3['Female BD'].values) / 2
+    bd_offspring_fortis = df3['Mid-offspr'].values
+    bd_parent_scandens = df4['mid_parent'].values
+    bd_offspring_scandens = df4['mid_offspring'].values
+    return bd_offspring_fortis, bd_offspring_fortis, bd_parent_scandens, bd_offspring_scandens

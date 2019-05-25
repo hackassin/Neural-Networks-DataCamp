@@ -6,7 +6,7 @@ report a 95% confidence interval."""
 import pandas as pd
 import numpy as np
 from customlib import finch_beaks_df as finch
-
+from customlib import bootstrap_repl as bt
 bd_1975, bd_2012, bl_1975, bl_2012 = finch.draw_finch_data()
 
 # Compute the difference of the sample means: mean_diff
