@@ -13,12 +13,11 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from customlib import finch_beaks_df as finch
 
-df1 = pd.read_csv("C:/Users/amlan/Documents/Git Repos/Machine Learning/Neural-Networks-DataCamp/customlib/datasets/finch_beaks_1975.csv")
-df2 = pd.read_csv("C:/Users/amlan/Documents/Git Repos/Machine Learning/Neural-Networks-DataCamp/customlib\datasets/finch_beaks_2012.csv")
-df = pd.concat([df1,df2], sort=False)
+finch_1975_df, finch_2012_df, finch_concat_df = finch.drw_finch_df()
 # Create bee swarm plot
-_ = sns.swarmplot(x = "year", y = "Beak depth, mm", data= df)
+_ = sns.swarmplot(x = "year", y = "Beak depth, mm", data= finch_concat_df)
 
 # Label the axes
 _ = plt.xlabel('year')

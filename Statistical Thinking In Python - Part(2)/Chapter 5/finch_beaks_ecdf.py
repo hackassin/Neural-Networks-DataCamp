@@ -6,11 +6,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from customlib import ecdf
 
-df1 = pd.read_csv("C:/Users/amlan/Documents/Git Repos/Machine Learning/Neural-Networks-DataCamp/customlib/datasets/finch_beaks_1975.csv")
-df2 = pd.read_csv("C:/Users/amlan/Documents/Git Repos/Machine Learning/Neural-Networks-DataCamp/customlib\datasets/finch_beaks_2012.csv")
-df = pd.concat([df1,df2], sort=False)
-bd_1975 = df1['Beak depth, mm'].values
-bd_2012 = df2['Beak depth, mm'].values
+from customlib import finch_beaks_df as finch
+
+bd_1975, bd_2012, bl_1975, bl_2012 = finch.draw_finch_data()
 # Compute ECDFs
 x_1975, y_1975 = ecdf.ecdf.ecdf_compute(bd_1975)
 x_2012, y_2012 = ecdf.ecdf.ecdf_compute(bd_2012)

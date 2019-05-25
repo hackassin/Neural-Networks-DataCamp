@@ -6,14 +6,9 @@ for the 1975 and 2012 specimens."""
 
 import pandas as pd
 import matplotlib.pyplot as plt
+from customlib import finch_beaks_df as finch
 
-df1 = pd.read_csv("C:/Users/amlan/Documents/Git Repos/Machine Learning/Neural-Networks-DataCamp/customlib/datasets/finch_beaks_1975.csv")
-df2 = pd.read_csv("C:/Users/amlan/Documents/Git Repos/Machine Learning/Neural-Networks-DataCamp/customlib\datasets/finch_beaks_2012.csv")
-df = pd.concat([df1,df2], sort=False)
-bd_1975 = df1['Beak depth, mm'].values
-bd_2012 = df2['Beak depth, mm'].values
-bl_1975 = df1['Beak length, mm'].values
-bl_2012 = df2['Beak length, mm'].values
+bd_1975, bd_2012, bl_1975, bl_2012 = finch.draw_finch_data()
 # Make scatter plot of 1975 data
 _ = plt.plot(bl_1975, bd_1975, marker='.',
              linestyle='none', color='blue', alpha=0.5)
