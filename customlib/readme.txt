@@ -6,3 +6,4 @@ Modules added so far:
 4. pearson_coeff: Computes pearson_r correlation factor between two types of data
 5. bootstrap_repl: Computes bootstrap replicates based on the test statistic provided
 6. finch_beaks_df: Extracts dataframes from the Finch beaks dataset
+7. fish_sleep_df: Extracts dataframes from the fish dataset
